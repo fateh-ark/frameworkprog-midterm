@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IUP_BMI_Calculator.MainPage"
+             xmlns:local="TODO"
+             Title="TODO">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="BMI Calculator" FontSize="40" HorizontalOptions="Center" FontAttributes="Bold" TextColor="DarkBlue"></Label>
+
+            <Label Text="Name: " HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"></Label>
+            <Entry Text="{Binding Name}" FontSize="Large" TextColor="Red" FontAttributes="Bold"></Entry>
+
+            <Label Text="Height (cm): " HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"></Label>
+            <Entry Text="{Binding Height}" FontSize="Large" TextColor="Red" FontAttributes="Bold"></Entry>
+            <Stepper Value="{Binding Height}" Minimum="20" Maximum="240" HorizontalOptions="Center"></Stepper>
+
+            <Label Text="Weight (kg): " HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"></Label>
+            <Entry Text="{Binding Weight}" FontSize="Large" TextColor="Red" FontAttributes="Bold"></Entry>
+            <Stepper Value="{Binding Weight}" Minimum="30" Maximum="320" HorizontalOptions="Center"></Stepper>
+
+
+            <Label Text="BMI Score" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" TextColor="DarkBlue"></Label>
+            <Label Text="{Binding BMIScore}" FontSize="25" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Green"></Label>
+            <Label Text="Result: " FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" TextColor="DarkBlue"></Label>
+            <Label Text="{Binding BMIResult}" FontSize="40" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Green"></Label>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button Text="Save" WidthRequest="150" BackgroundColor="Green" Command="{Binding SaveCommand}"></Button>
+                <Button Text="Clear" WidthRequest="150" BackgroundColor="Red" Command="{Binding ClearCommand}"></Button>
+            </HorizontalStackLayout>
+
+           
+            
+        </StackLayout>        
+    </ScrollView>
+
+</ContentPage>
