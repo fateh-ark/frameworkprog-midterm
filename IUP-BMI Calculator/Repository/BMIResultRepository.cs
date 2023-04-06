@@ -28,9 +28,18 @@ namespace IUP_BMI_Calculator.Repository
             _dbPath = dbPath;
         }
 
-        public void AddNewBMIResult(string name, double height, double weight, double BMIScore, string BMIResult)
+        public void AddNewBMIResult(string name, double height, double weight, double BMIScore, string Result)
         {
-            // TODO
+            Init();
+
+            BMIResult bmiResult = new BMIResult();
+            bmiResult.Name = name;
+            bmiResult.Height = height;
+            bmiResult.Weight = weight;
+            bmiResult.BMIScore = BMIScore;
+            bmiResult.Result = Result;
+
+            conn.Insert(bmiResult);
         }
     }
 }

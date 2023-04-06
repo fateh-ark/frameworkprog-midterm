@@ -7,11 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IUP_BMI_Calculator.Repository;
+
 
 namespace IUP_BMI_Calculator.ViewModel
 {
     internal partial class BMICalculatorViewModel : ObservableObject
     {
+
         [ObservableProperty]
         public String name;
 
@@ -44,17 +47,30 @@ namespace IUP_BMI_Calculator.ViewModel
         }
         
         [RelayCommand]
-        public void Save()
+        public void Save(string dbpath)
         {
-            // TO DO
-            App.
+            try
+            {
+                BMIResultRepository bmiResultRepository = new BMIResultRepository(dbpath);
+                bmiResultRepository.AddNewBMIResult(name, height, weight, BMIScore, BMIResult);
+            }
+            catch (Exception ex)
+            {
+                
+            }
 
         }
 
         [RelayCommand]
-        public void Clear()
+        public void Clear(string dbpath)
         {
             // TODO
+            try
+            {
+                name = "";
+                height = 0;
+                weight = 0;
+            }
         }
 
     }
