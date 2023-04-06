@@ -105,6 +105,23 @@ a. Add the dbPath variable declaraƟon for SQLite database. Use this file name f
 
 b. Add BMIResultRepository into builder.Services
 
+```
+```
+
 ## 7. App.xaml.cs
 
 a. Add the BMIResultRepository as a property and iniƟalize it inside the constructor.
+
+```
+```
+
+<br>
+<br>
+
+# Screenshots
+
+![](img1.png)
+
+after pressing clear
+
+![](img2.png)

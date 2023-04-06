@@ -65,9 +65,9 @@ namespace IUP_BMI_Calculator.ViewModel
         public void Clear(string dbpath)
         {
             // TODO
-            name = "";
-            height = 0;
-            weight = 0;
+            Name = "";
+            Height = 0;
+            Weight = 0;
         }
 
     }
